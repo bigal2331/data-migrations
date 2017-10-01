@@ -1,0 +1,10 @@
+1. $ npm install sequelize-cli --save
+	a. apt install node-express-generator
+2. express baby-names --view=pug 
+ 	a. cd baby-names
+3. npm install
+4. psql : CREATE DATABASE baby_names_development;
+5. sequelize model:create --name toy --attributes name:string,notes:text
+6. sequelize db:migrate
+	a. sequelize db:migrate:undo - to undo 1 migration
+	b. sequelize db:migrate:undo:all - to undo all migrations
