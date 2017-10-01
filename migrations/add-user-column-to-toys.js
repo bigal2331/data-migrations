@@ -1,11 +1,20 @@
+'use strict';
+
 module.exports = {
 	up: function(queryInterface, Sequelize){
-		queryInterface.addColumn('toys','userId',Sequelize.Integer);
+		return queryInterface.addColumn(
+			'toys',
+			'userId',
+			{
+				type: Sequelize.INTEGER,
+				allowNull: false
 
-	}
+			})
+
+	},
 
 
 	down: function(queryInterface, Sequelize){
-		queryInterface.removeColumn('toys','userId');
+		return queryInterface.removeColumn('toys','userId');
 	}
 }
